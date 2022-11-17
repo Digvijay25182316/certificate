@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certificate</title>
+    <style>
+*{
+  margin: 0%;
+  padding: 0%;
+}
+.main_container{  
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.download-btn{
+    margin: 26px;
+    background-color: steelblue;
+    border: none;
+    font-size: 16px;
+    border-radius: 9px;
+    padding: 10px;
+    cursor: pointer;
+}
+.download-btn:active{
+    background-color: rgb(16, 60, 97);
+    color: white;
+}
+
+
+.certificate{
+    display: inline-block;
+    background-image: url('../assets/DP2.jpg');
+    background-position: center;
+    background-size: contain;
+    height: 398px;
+    width: 399px;
+    z-index: 1;
+    background-repeat: no-repeat;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.profile_photo{
+    position: relative;
+    height: 221px;
+    width: 225px;
+    display: inline-block;
+    top: 97px;
+    left: 164px;
+    background-image: url(../);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 139px;
+}
+.Upload_image{
+    position: relative;
+    left: 76px;
+    top: 67px;
+    font-weight: 800;
+    color: cornflowerblue;
+}
+
+.namefield{
+    position: relative;
+    display: inline-block;
+    top: 56px;
+    left: -114px;
+    font-weight: 1000;
+}
+.slogan{
+    position: relative;
+    display: inline;
+    left: 2px;
+    top: -238px;
+    
+}
+/*-------------------- profile---------------------- */
+.profile-pic {
+    top: 130px;
+	 color: transparent;
+	 transition: all 0.3s ease;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 position: relative;
+	 transition: all 0.3s ease;
+}
+ .profile-pic input {
+	 display: none;
+}
+ .profile-pic img {
+	position: absolute;
+    object-fit: cover;
+    width: 237px;
+    height: 237px;
+    box-shadow: 0 0 10px 0 rgb(255 255 255 / 35%);
+    border-radius: 133px;
+    z-index: 0;
+}
+ .profile-pic .-label {
+	 cursor: pointer;
+	 width: 227px;
+     height: 231px;
+
+}
+ .profile-pic:hover .-label {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 background-color: rgba(0, 0, 0, .8);
+	 z-index: 10000;
+	 color: #fafafa;
+	 transition: background-color 0.2s ease-in-out;
+	 border-radius: 100px;
+	 margin-bottom: 0;
+}
+ .profile-pic span {
+	 display: inline-flex;
+	 padding: 0.2em;
+	 height: 2em;
+}
+
+    </style>
+</head>
+<body>
+    <main>
+    <div class="main_container">
+      <div id="content">
+        <div class="certificate ">
+            <div class="profile-pic profile_photo">
+                <label class="-label" for="file">
+                  <span class="glyphicon glyphicon-camera"></span>
+                  <span>Change Image</span>
+                </label>
+                <input id="file" type="file" onchange="loadFile(event)"/>
+                <img src="./assets/uploadImage.jpg" id="output" width="200" alt="your profile image" />
+              </div>
+            <div class="namefield" id="namefield"></div>
+            <div class="slogan">
+        </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+        
+        <button id="download-page-as-image" class="download-btn">Download Page as Image</button>
+    </main>
+</body>
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="./scripts/htmltoimage.js"></script>
+<script src="./scripts/firebase.js"></script>
+</html>

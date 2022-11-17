@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+        .Login-btn{
+            position: fixed;
+            background-color: darkcyan;
+            padding: 10px;
+            box-shadow: purple;
+            cursor: pointer;
+            border-radius: 9px;
+            outline: none;
+            border: none;
+        }
+        .Login-btn:active{
+            background-color:  rgb(163, 230, 230);
+        }
+        .main-container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .main-container::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            opacity: 0.9;
+            z-index: -1;
+            background-image: url(../assets/DP2.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            filter: blur(6px);
+            -webkit-filter: blur(6px);
+}
+    </style>
+</head>
+<body>
+    <div class="main-container">
+    <button class="Login-btn" onclick="signInWithGoogle()">LOGIN TO GET YOUR CERTIFICATE</button>
+</div>
+</body>
+<script src="../scripts/firebase.js"></script>
+</html>
